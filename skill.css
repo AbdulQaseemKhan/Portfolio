@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: var(--bgcolor);
+  }
+:root{
+  --bgcolor :#20242D;
+  --maincolor:#01EEFE;
+}
+.navbar{
+  height: 60px;
+  width: 100%;
+  background-color: var(--bgcolor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px; 
+}
+.navbar i{
+  color: var(--bgcolor);
+}
+.menu{
+  display: flex;
+  list-style: none;
+}
+.menu li a{
+  padding: 20px;
+  color:white;
+  font-size: 18px;
+  text-decoration: none;
+}
+.logo{
+  color:var(--maincolor);
+  font-size: 20px;
+  cursor: pointer;
+  padding-right: 27%;
+  text-decoration: none;
+}
+.menu li a:hover{
+  color: var(--maincolor);
+  text-decoration-line:underline;
+}
+.contaner{
+  height: 600px;
+  width: 80%;
+  margin-top:45px;
+  text-align: center;
+  margin-left: 10%;
+}
+.contaner h1{
+  font-size: 45px;
+  text-decoration: underline;
+  color: var(--maincolor);
+}
+.skills{
+  height: 500px;
+  width: 100%;
+  justify-items: center;
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+.box{
+  height: 200px;
+  width: 190px;
+  margin:35px;
+  align-content: center;
+  background-color: #232833;
+  box-shadow: 2px 2px 0px 0px #323846;
+}
+
+.skills img{
+  height: 100px;
+}
+.skills h3{
+  color: var(--maincolor);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.box:hover{
+  transform: translateY(-.2rem);
+  box-shadow: 1px 1px 6px 5px var(--maincolor);
+}
+@media screen and (min-width:320px) and (max-width:745px) {
+  .menu li a{
+    display: none;
+  }
+  .logo{
+    align-items: center;
+  }
+  .navbar i{
+    color: white;
+  }
+  .contaner h1{
+    width: 100%;
+    text-align: center;
+  }
+  .skills{
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+@media screen and (min-width:768px) and (max-width:880px) {
+  .menu li a{
+    display: none;
+  }
+  .logo{
+    align-items: center;
+  }
+  .navbar i{
+    color: white;
+  } 
+  .contaner h1{
+    width: 100%;
+    text-align: center;
+  }
+  .skills{
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
